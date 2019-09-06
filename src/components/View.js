@@ -1,12 +1,15 @@
 import React from 'react'
+import SearchBar from './SearchBar'
 import '../view.css'
 
-const View = () => {
+class View extends React.Component {
+  render() {
     return (
-        <div className="view">
-            <p>View</p>
-        </div>
+      <div className="ui container">
+        <SearchBar />
+      </div>
     )
+  }
 }
 
-export default View
+export default View;

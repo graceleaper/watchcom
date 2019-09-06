@@ -4,7 +4,7 @@ body, html {
 }
 
 .splashpage {
-    background-image: url(https://images.unsplash.com/photo-1523939158338-1708c2391359?ixlib=rb-1.2.1&auto=format&fit=crop&w=1650&q=80); 
+    background-image: url(https://images.unsplash.com/photo-1555218302-b3da3b3c0292?ixlib=rb-1.2.1&auto=format&fit=crop&w=1666&q=80); 
     filter: contrast(80%);
     height: 100vh;
     background-position: center;
@@ -14,7 +14,7 @@ body, html {
 }
 
 h1 {
-    padding-top: 5em;
+    padding-top: 6em;
     margin-top: 0;
     font-size: 3em;
     text-transform: uppercase;
@@ -23,5 +23,20 @@ h1 {
 }
 
 button {
-  background-color: green;
+  cursor: pointer;
+  text-decoration: none;
+  padding: 0.5em;
+  width: 10em;
+  border-radius: 0.5em;
+  color: white;
+  font-size: 1.5em;
+  border-style: none;
+  background-color: rgb(29, 166, 150);
+  -webkit-transition-duration: 0.3s; /* Safari */
+  transition-duration: 0.3s;
+}
+
+button:hover {
+  background-color: white;
+  color: rgb(29, 166, 150);
 }

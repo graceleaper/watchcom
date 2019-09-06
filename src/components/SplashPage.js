@@ -8,7 +8,7 @@ const SplashPage = () => {
                 <div className="content">
                     <h1>WatchCom</h1>
                     <Link to={"/view"}>
-                        <button>Start watching</button>
+                        <button>start watching</button>
                     </Link>
                 </div>
         </div>

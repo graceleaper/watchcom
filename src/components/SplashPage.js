@@ -1,10 +1,16 @@
-import React from 'react';
+import React from 'react'
 import '../splashpage.css'
+import { Link } from 'react-router-dom'
 
 const SplashPage = () => {
     return (
         <div className="splashpage">
-            <p>Homepage</p>
+                <div className="content">
+                    <h1>WatchCom</h1>
+                    <Link to={"/view"}>
+                        <button>Start watching</button>
+                    </Link>
+                </div>
         </div>
     )
 }

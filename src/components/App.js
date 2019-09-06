@@ -10,7 +10,7 @@ const App = () => {
         <Switch>
             <Route exact path="/" component={SplashPage} />
             <Route exact path="/view" component={View}/>
-          </Switch>
+        </Switch>
     </div>
         </BrowserRouter>
     )

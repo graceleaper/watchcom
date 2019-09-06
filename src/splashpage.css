@@ -4,16 +4,24 @@ body, html {
 }
 
 .splashpage {
-    background-image: url(https://images.unsplash.com/photo-1515089836358-4c06e3b50c80?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80); 
+    background-image: url(https://images.unsplash.com/photo-1523939158338-1708c2391359?ixlib=rb-1.2.1&auto=format&fit=crop&w=1650&q=80); 
+    filter: contrast(80%);
     height: 100vh;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    display: flex;
-    justify-content: center;
-    color: white;
-  }
+    text-align: center;
+}
 
-p {
+h1 {
+    padding-top: 5em;
     margin-top: 0;
+    font-size: 3em;
+    text-transform: uppercase;
+    letter-spacing: 0.4em;
+    color: white;
+}
+
+button {
+  background-color: green;
 }

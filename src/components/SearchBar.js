@@ -1,4 +1,6 @@
 import React, { Component } from "react";
+import '../view.css'
+import logo from '../logo.png'
 
 class SearchBar extends Component {
     state = { term: '' }
@@ -14,10 +16,10 @@ class SearchBar extends Component {
         // callback from parent component
         this.props.onTermSubmit(this.state.term)
     }
-
   render() {
     return (
       <div className="search-bar ui segment">
+        <img className="logo" alt="logo" src={logo} width="120px" />
         <form onSubmit={this.onFormSubmit} className="ui form">
           <div className="field">
             <label>Video Search</label>

@@ -1,0 +1,13 @@
+.logo {
+    margin-left: 5em;
+}
+
+.search-bar {
+    display: flex;
+}
+
+form {
+    padding-top: 2em;
+    padding-left: 5em;
+    width: 60%;
+}

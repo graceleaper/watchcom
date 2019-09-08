@@ -7,8 +7,13 @@ import VideoItem from "./VideoItem"
     object destructuring
 */
 const VideoList = ({ videos }) => {
-  const renderedList = videos.map(video => {
-    return <VideoItem />
+  const renderedList = videos.map((video, index) => {
+    return (
+        <VideoItem
+            key = {index}
+            video = {video}
+        />
+    )
   })
   { /* no longer have to use props.videos.length */ }
   return <div>{renderedList}</div>

@@ -19,7 +19,7 @@ class SearchBar extends Component {
   render() {
     return (
       <div className="search-bar ui segment">
-        <img className="logo" alt="logo" src={logo} width="120px" />
+        <img className="logo" alt="logo" src={logo} width="90px" />
         <form onSubmit={this.onFormSubmit} className="ui form">
           <div className="field">
             <label>Video Search</label>

@@ -6,17 +6,18 @@ import VideoItem from "./VideoItem"
     the functional component, can use 
     object destructuring
 */
-const VideoList = ({ videos }) => {
+const VideoList = ({ videos, onVideoSelect }) => {
   const renderedList = videos.map((video, index) => {
     return (
         <VideoItem
-            key = {index}
-            video = {video}
+            key={index}
+            video={video}
+            onVideoSelect={onVideoSelect}
         />
     )
   })
   { /* no longer have to use props.videos.length */ }
-  return <div>{renderedList}</div>
+  return <div className="ui relaxed divided list">{renderedList}</div>
 }
 
 export default VideoList

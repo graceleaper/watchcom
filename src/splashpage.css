@@ -4,7 +4,7 @@ body, html {
 }
 
 .splashpage {
-    background-image: url(https://images.unsplash.com/photo-1555218302-b3da3b3c0292?ixlib=rb-1.2.1&auto=format&fit=crop&w=1666&q=80); 
+    background-image: url(https://images.unsplash.com/photo-1516321497487-e288fb19713f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80); 
     filter: contrast(80%);
     height: 100vh;
     background-position: center;
@@ -13,9 +13,25 @@ body, html {
     text-align: center;
 }
 
+.splash-container {
+  margin-top: 0;
+  padding-top: 7em;
+}
+
+.splash-content {
+  filter: opacity(90%);
+  background-color: black;
+  width: 500px;
+  padding: 30px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 h1 {
+  /*
     padding-top: 6em;
     margin-top: 0;
+    */
     font-size: 3em;
     text-transform: uppercase;
     letter-spacing: 0.4em;

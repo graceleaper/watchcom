@@ -12,10 +12,12 @@ class View extends React.Component {
     selectedVideo: null
   }
 
+  async componentDidMount() {
+    this.onTermSubmit('lofi')
+  }
+
   onTermSubmit = async (term) => {
     // contains information about the data that came back
-    // console.log(response)
-
     const response = await youtube.get('/search', {
       params: {
         q: term
@@ -23,7 +25,10 @@ class View extends React.Component {
     })
     console.log(response)
 
-    this.setState({videos: response.data.items})
+    this.setState({
+      videos: response.data.items,
+      selectedVideo: response.data.items[0]
+    })
   }
 
   // video object will be video we're fetching from YouTube API
@@ -36,8 +41,16 @@ class View extends React.Component {
       <div>
         <SearchBar onTermSubmit = {this.onTermSubmit} />
         {/* {this.state.videos.length} videos */}
-        <VideoDetail video={this.state.selectedVideo} />
-        <VideoList onVideoSelect={this.onVideoSelect} videos = {this.state.videos} />
+        <div className="ui grid">
+          <div className="ui row">
+            <div className="ten wide column">
+              <VideoDetail video={this.state.selectedVideo} />
+            </div>
+            <div className="six wide column">
+              <VideoList onVideoSelect={this.onVideoSelect} videos = {this.state.videos} />
+            </div>
+          </div>
+        </div>
       </div>
     )
   }

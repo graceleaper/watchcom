@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import '../view.css'
 import logo from '../logo.png'
+import { Link } from 'react-router-dom' 
 
 class SearchBar extends Component {
     state = { term: '' }
@@ -19,7 +20,9 @@ class SearchBar extends Component {
   render() {
     return (
       <div className="search-bar ui segment">
-        <img className="logo" alt="logo" src={logo} width="90px" />
+        <Link to={'/'}>
+          <img className="logo" alt="logo" src={logo} width="90px" />
+        </Link>
         <form onSubmit={this.onFormSubmit} className="ui form">
           <div className="field">
             <label>Video Search</label>

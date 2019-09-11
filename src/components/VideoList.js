@@ -7,10 +7,10 @@ import VideoItem from "./VideoItem"
     object destructuring
 */
 const VideoList = ({ videos, onVideoSelect }) => {
-  const renderedList = videos.map((video, index) => {
+  const renderedList = videos.map((video) => {
     return (
         <VideoItem
-            key={index}
+            key={video.id.videoId}
             video={video}
             onVideoSelect={onVideoSelect}
         />

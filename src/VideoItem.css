@@ -1,3 +1,18 @@
+.video-title {
+    font-size: 1.5em !important;
+}
+
+.follow-button {
+    background-color: rgb(244, 226, 107);
+    color: black;
+    padding: 0.5em;
+    text-transform: uppercase;
+}
+
+.channel-info {
+    display: flex;
+    justify-content: space-between;
+}
 
 .video-item {
     display: flex !important;

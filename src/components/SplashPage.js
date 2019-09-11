@@ -11,13 +11,6 @@ const SplashPage = () => {
                     <Link to={"/view"}>
                         <img className="main-logo" alt="main logo" src={mainlogo}/>
                     </Link>
-                    {/*
-                    <h1>WatchCom</h1>
-                    <Link to={"/view"}>
-                        <button>start watching</button>
-                    </Link>
-                    */}
-
                     </div>
                 </div>
         </div>

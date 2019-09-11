@@ -6,18 +6,50 @@ import VideoItem from "./VideoItem"
     the functional component, can use 
     object destructuring
 */
-const VideoList = ({ videos, onVideoSelect }) => {
-  const renderedList = videos.map((video) => {
+class VideoList extends React.Component {
+  constructor({ videos, onVideoSelect }) {
+    super({ videos, onVideoSelect })
+    this.state = {
+      moreVideos: false
+    }
+  }
+
+  handleClick = () => {
+    this.setState({
+      moreVideos: !this.state.moreVideos
+    })
+  }
+
+  render() {
+    const renderedList = this.props.videos.slice(0, 3).map((video) => {
+      return (
+          <VideoItem
+              key={video.id.videoId}
+              video={video}
+              onVideoSelect={this.props.onVideoSelect}
+          />
+      )
+    })
+
+    const showMore = this.props.videos.slice(4).map((video) => {
+      return (
+          <VideoItem
+              key={video.id.videoId}
+              video={video}
+              onVideoSelect={this.props.onVideoSelect}
+          />
+      )
+    })
+
+    { /* no longer have to use props.videos.length */ }
     return (
-        <VideoItem
-            key={video.id.videoId}
-            video={video}
-            onVideoSelect={onVideoSelect}
-        />
+      <div className="ui relaxed divided list">
+        {renderedList}
+        {this.state.moreVideos ? <button onClick={this.handleClick}>Show less</button> : <button onClick={this.handleClick}>Show more</button>}
+        {this.state.moreVideos ? showMore : null }
+      </div>
     )
-  })
-  { /* no longer have to use props.videos.length */ }
-  return <div className="ui relaxed divided list">{renderedList}</div>
+  }
 }
 
 export default VideoList

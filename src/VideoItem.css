@@ -2,16 +2,16 @@
     font-size: 1.5em !important;
 }
 
+.channel-description {
+    text-align: right;
+}
+
 .follow-button {
     background-color: rgb(244, 226, 107);
     color: black;
     padding: 0.5em;
     text-transform: uppercase;
-}
-
-.channel-info {
-    display: flex;
-    justify-content: space-between;
+    margin-left: 1em;
 }
 
 .video-item {

@@ -41,8 +41,8 @@ class View extends React.Component {
       <div>
         <SearchBar onTermSubmit = {this.onTermSubmit} />
         {/* {this.state.videos.length} videos */}
-        <div className="ui grid">
-          <div className="ui row">
+        <div className="ui grid descriptors">
+          <div className="videos-display ui row">
             <div className="ten wide column">
               <VideoDetail video={this.state.selectedVideo} />
             </div>

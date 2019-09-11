@@ -14,11 +14,8 @@ const VideoDetail = ({ video }) => {
                 <iframe title="video player" src={videoSrc} />
             </div>
             <div className="ui segment">
-                <div className="channel-info">
-                    <h4 className="video-title ui header">{video.snippet.title}</h4>
-                    <a className="follow-button" href={channelLink} target="_blank">Follow</a>
-                </div>
-                <p>Uploaded by <strong>{video.snippet.channelTitle}</strong></p>
+                <h4 className="video-title ui header">{video.snippet.title}</h4>
+                <p className="channel-description">Uploaded by <strong>{video.snippet.channelTitle}</strong> <a className="follow-button" href={channelLink} target="_blank">Follow</a></p>
                 <p>{video.snippet.description}</p>
             </div>
         </div>

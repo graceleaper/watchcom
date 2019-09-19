@@ -13,7 +13,7 @@ class View extends React.Component {
   }
 
   async componentDidMount() {
-    this.onTermSubmit('lofi')
+    this.onTermSubmit('2019 travel places')
   }
 
   onTermSubmit = async (term) => {

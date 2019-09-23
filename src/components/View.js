@@ -23,7 +23,15 @@ class View extends React.Component {
         q: term
       }
     })
-    console.log(response)
+
+    /*
+
+    After anywhere I'm making a request, can console.log
+    the data to see the key/value pairs within this object:
+
+    console.log('*** RESPONSE DATA ***:', response.data)
+    
+    */
 
     this.setState({
       videos: response.data.items,

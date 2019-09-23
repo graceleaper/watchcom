@@ -21,7 +21,7 @@ class VideoList extends React.Component {
   };
 
   render() {
-    const renderedList = this.props.videos.slice(0, 3).map(video => {
+    const allVideos = this.props.videos.map(video => {
       return (
         <VideoItem
           key={video.id.videoId}
@@ -31,19 +31,12 @@ class VideoList extends React.Component {
       );
     });
 
-    const showMore = this.props.videos.slice(4).map(video => {
-      return (
-        <VideoItem
-          key={video.id.videoId}
-          video={video}
-          onVideoSelect={this.props.onVideoSelect}
-        />
-      );
-    });
+   const renderedList = allVideos.slice(0, 3)
 
-    {
-      /* no longer have to use props.videos.length */
-    }
+   const showMore = allVideos.slice(3)
+
+  /* no longer have to use props.videos.length */
+
     return (
       <div className="ui relaxed divided list">
         {renderedList}

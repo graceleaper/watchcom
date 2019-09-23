@@ -1,6 +1,7 @@
 import '../VideoItem.css'
 import React from 'react'
 
+// props.video is an object with information about an individual video
 const VideoItem = ({ video, onVideoSelect }) => {
     return (
         <div onClick={() => {onVideoSelect(video)}} className="video-item item">
